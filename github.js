@@ -9,6 +9,8 @@ class Github {
 
     const profileData = await profileResponse.json();
 
+    // console.log(profileData.avatar_url)
+
     return {
       profileData
     }
