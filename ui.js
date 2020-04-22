@@ -4,7 +4,6 @@ class UI {
   }
 
   showProfile(user) {
-
     this.profileData.innerHTML = `
       <div class="card card-body mb-3">
         <div class="row">
@@ -31,6 +30,10 @@ class UI {
       <div id="repos"></div>
     `;
     this.displayHideListItem(user);
+  }
+
+  clearProfile() {
+    this.profileData.innerHTML = '';
   }
 
   displayHideListItem(user) {

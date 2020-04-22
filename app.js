@@ -1,15 +1,23 @@
-//Init GitHub
-const { searchUser, github, ui } = newFunction();
+//Destructuring 
+const {
+  searchUser,
+  github,
+  ui
+} = variablesObj();
 
 keyUpFind();
 
-function newFunction() {
+function variablesObj() {
   const github = new Github;
   //Init UI
   const ui = new UI;
   //search input
   const searchUser = document.getElementById('searchUser');
-  return { searchUser, github, ui };
+  return {
+    searchUser,
+    github,
+    ui
+  };
 }
 
 function keyUpFind() {
@@ -28,11 +36,13 @@ function findUser(userText) {
         if (data.profileData.message === 'Not Found') {
           //Show alert
         } else {
+          const user = data.profileData;
           //Show the profile
-          ui.showProfile(data.profileData);
+          ui.showProfile(user);
         }
       });
   } else {
     //Clear profile
+    ui.clearProfile();
   }
 }
