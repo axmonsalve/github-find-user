@@ -30,6 +30,10 @@ class UI {
       <h3 class="page-heading mb-3">Latest Repos</h3>
       <div id="repos"></div>
     `;
+    this.displayHideListItem(user);
+  }
+
+  displayHideListItem(user) {
     if (user.company === null) {
       document.getElementById('company').style.display = 'none';
     }
