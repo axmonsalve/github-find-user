@@ -32,6 +32,37 @@ class UI {
     this.displayHideListItem(user);
   }
 
+  //Show alert
+  showAlert(message, className) {
+    //Clear any remaining alerts
+    this.clearAlert();
+    //Create div 
+    const div = document.createElement('div');
+    div.className = className;
+    div.appendChild(document.createTextNode(message));
+    //Get parent
+    const container = document.querySelector('.searchContainer');
+    //Get search box
+    const search = document.querySelector('.search');
+
+    container.insertBefore(div, search);
+
+    //Time out after 3 seconds
+    setTimeout(() => {
+      this.clearAlert();
+    }, 3000);
+  }
+
+  //Clear alert message
+  clearAlert() {
+    const currentAlert = document.querySelector('.alert');
+
+    if (currentAlert) {
+      currentAlert.remove();
+    }
+  }
+
+  //Clear div
   clearProfile() {
     this.profileData.innerHTML = '';
   }

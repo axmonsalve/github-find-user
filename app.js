@@ -35,6 +35,7 @@ function findUser(userText) {
       .then(data => {
         if (data.profileData.message === 'Not Found') {
           //Show alert
+          ui.showAlert('User Not Found', 'alert alert-danger')
         } else {
           const user = data.profileData;
           //Show the profile
