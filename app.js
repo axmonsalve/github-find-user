@@ -38,8 +38,10 @@ function findUser(userText) {
           ui.showAlert('User Not Found', 'alert alert-danger')
         } else {
           const user = data.profileData;
+          const repos = data.reposData;
           //Show the profile
           ui.showProfile(user);
+          ui.showRepos(repos);
         }
       });
   } else {

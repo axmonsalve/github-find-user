@@ -5,28 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
   <title>Document</title>
+
 </head>
 
 <body>
-  <nav class="navbar navbar-dark bg-primary mb-3">
-    <div class="container">
-      <a href="#" class="navbar-brand">GitHub Finder</a>
-    </div>
-  </nav>
+  <main>
+    <nav class="navbar navbar-dark bg-primary mb-3">
+      <div class="container">
+        <a href="#" class="navbar-brand">GitHub Finder</a>
+      </div>
+    </nav>
 
-  <div class="container searchContainer">
-    <div class="search card card-body">
-      <h1>Search GitHub Users</h1>
-      <p class="lead">Enter a user name to fetch a user profile and repos</p>
-      <input type="text" name="" id="searchUser" class="form-control" placeholder="GitHub User Name">
+    <div class="container searchContainer">
+      <div class="search card card-body">
+        <h1>Search GitHub Users</h1>
+        <p class="lead">Enter a user name to fetch a user profile and repos</p>
+        <input type="text" name="" id="searchUser" class="form-control" placeholder="GitHub User Name">
+      </div>
+      <br>
+      <div id="profile"></div>
     </div>
-    <br>
-    <div id="profile"></div>
-  </div>
+  </main>
 
-  <footer class="mt-5 p-3 text-center bg-light">
-    GitHub Finder &copy;
+  <footer class="d-flex bg-light mt-5 p-3 text-center justify-content-center flex-column">
+    <p> GitHub Finder &copy;</p>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
