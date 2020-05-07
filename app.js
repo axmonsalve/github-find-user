@@ -8,9 +8,9 @@ const {
 keyUpFind();
 
 function variablesObj() {
-  const github = new Github;
+  const github = new Github();
   //Init UI
-  const ui = new UI;
+  const ui = new UI();
   //search input
   const searchUser = document.getElementById('searchUser');
   return {
@@ -35,7 +35,7 @@ function findUser(userText) {
       .then(data => {
         if (data.profileData.message === 'Not Found') {
           //Show alert
-          ui.showAlert('User Not Found', 'alert alert-danger')
+          ui.showAlert('User Not Found', 'alert alert-danger');
         } else {
           const user = data.profileData;
           const repos = data.reposData;
